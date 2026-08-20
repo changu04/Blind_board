@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게임 대기실</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+    <!-- 중앙 보드판 -->
+    <div class="board-container" id="game-board">
+        <div class="cell">
+            <div class="token blue"></div>
+        </div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell">
+            <div class="token purple"></div>
+        </div>
+
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+
+        <div class="cell">
+            <div class="token orange"></div>
+        </div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell">
+            <div class="token green"></div>
+        </div>
+    </div>
+
+    <!-- 플레이어 1 (방장 - 좌측 상단) -->
+    <div class="player-info top-left">
+        <div class="avatar">
+            <div class="host-star">★</div>
+        </div>
+        <div>
+            <div id="host"></div>
+            <div id="host_status"></div>
+        </div>
+    </div>
+
+    <!-- 플레이어 2 (우측 상단) -->
+    <div class="player-info top-right">
+        <div class="avatar"></div>
+        <div>
+            <div id="player2"></div>
+            <div id="player2_status"></div>
+        </div>
+    </div>
+
+    <!-- 플레이어 3 (좌측 하단) -->
+    <div class="player-info bottom-left">
+        <div class="avatar"></div>
+        <div>
+            <div id="player3"></div>
+            <div id="player3_status"></div>
+        </div>
+    </div>
+
+    <!-- 플레이어 4 (우측 하단) -->
+    <div class="player-info bottom-right">
+        <div class="avatar"></div>
+        <div>
+            <div id="player4"></div>
+            <div id="player4_status"></div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+/* 전체 배경 및 폰트 설정 */
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#main-container{
+    text-align: center;
+    width: 40%;
+    font-size: 50px;
+    margin-right: 10px;
+    word-break: keep-all;
+}
+
+#main-container p{
+    margin: 10px;
+}
+#link-container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+    text-align: center;
+    font-size: 50px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#link-container iframe,
+#link-container #Join-Room {
+    flex: 1;
+    width: 0;
+    height: 500px;
+    border: 2px solid white;
+}
+
+#Join-Room {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+    /* 부드러운 색상 전환 효과 */
+}
+
+/* ⭐ 마우스 올렸을 때 흑백 반전 애니메이션 (클릭하고 싶게 만듦!) */
+#Join-Room:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+#room-list-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    padding: 15px;
+    width: 40%;
+    max-height: 470px;
+    height: auto;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.room-item {
+    background-color: black;
+    /* 점선으로 박스 처리도 좋음 */
+    /* border: 1px dashed white; */
+    border: 1px;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    /* 부드러운 전환 효과 */
+    transition: 0.2s;
+}
+
+/* 색상 반전 */
+.room-item:hover, #create_button:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#create_button  {
+    width: 50%;
+    border: 1px;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.room_name  {
+    border: 1px;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#Join-Room  {
+    border: 2px solid white;
+    justify-content: center;
+}

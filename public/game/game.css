@@ -1,0 +1,156 @@
+/* =========================================
+    1. 전체 배경 및 폰트 설정
+========================================= */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Malgun Gothic', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* =========================================
+    2. 중앙 보드판 (CSS Grid 사용)
+========================================= */
+.board-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    width: 500px;
+    height: 500px;
+    border: 2px solid #ffffff;
+}
+
+.cell {
+    border: 1px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 보드판 모서리에 놓일 말(Token) 디자인 */
+.token {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+}
+
+.token.blue {
+    background-color: #216d91;
+}
+
+.token.purple {
+    background-color: #9b289a;
+}
+
+.token.orange {
+    background-color: #ef7932;
+}
+
+.token.green {
+    background-color: #4da638;
+}
+
+/* =========================================
+    3. 플레이어 프로필 위치 (화면 모서리에 고정)
+========================================= */
+.player-info {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 각 모서리 위치 지정 */
+.top-left {
+    top: 30px;
+    left: 30px;
+}
+
+.top-right {
+    top: 30px;
+    right: 30px;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.bottom-left {
+    bottom: 30px;
+    left: 30px;
+}
+
+.bottom-right {
+    bottom: 30px;
+    right: 30px;
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+/* =========================================
+    4. 아바타 및 텍스트 디자인
+========================================= */
+.avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #8f9598;
+    border-radius: 50%;
+    border: 3px solid #000000;
+    outline: 2px solid #8f9598;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+/* 머리 부분 */
+.avatar::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 35px;
+    height: 35px;
+    background-color: #000000;
+    /* 👈 투명(transparent)에서 검정색으로 변경! */
+    border: 3px solid #000;
+    border-radius: 50%;
+}
+
+/* 몸통 부분 */
+.avatar::after {
+    content: '';
+    width: 60px;
+    height: 40px;
+    background-color: #000000;
+    /* 👈 투명(transparent)에서 검정색으로 변경! */
+    border: 3px solid #000;
+    border-radius: 30px 30px 0 0;
+    margin-bottom: -5px;
+}
+
+/* 방장 별 마크 */
+.host-star {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #216d91;
+    font-size: 24px;
+    text-shadow: 1px 1px 0 #000;
+    z-index: 10;
+}
+
+.player-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.player-status {
+    font-size: 16px;
+    color: #cccccc;
+}
